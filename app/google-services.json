@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "545950436192",
+    "firebase_url": "https://comin-c269c.firebaseio.com",
+    "project_id": "comin-c269c",
+    "storage_bucket": "comin-c269c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545950436192:android:636da287018990b7f7ac05",
+        "android_client_info": {
+          "package_name": "com.example.codingmim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545950436192-p4lce3pekt0ol66onnqdkmi1m12s0go0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.codingmim",
+            "certificate_hash": "26bf39347a14eb5ad017f50f894573c97994abde"
+          }
+        },
+        {
+          "client_id": "545950436192-ab2eq00d9at76lun56j42u71b31jaq3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtvxghhrtFt78lD8ViM-UV4nLETSmPm-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545950436192-ab2eq00d9at76lun56j42u71b31jaq3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
