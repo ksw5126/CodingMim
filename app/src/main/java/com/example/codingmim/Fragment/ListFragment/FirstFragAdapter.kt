@@ -1,4 +1,4 @@
-package com.example.codingmim.Fragment
+package com.example.codingmim.Fragment.ListFragment
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -17,7 +17,8 @@ class FirstFragAdapter (val context: Context, val list: ArrayList<ContentListMod
 
         if(convertView == null) {
             view = LayoutInflater.from(context).inflate(R.layout.listview_item, null)
-            holder = ViewHolder()
+            holder =
+                ViewHolder()
 
             holder.view_image1 = view.findViewById(R.id.lv_image_area)
             holder.view_text1 = view.findViewById(R.id.lv_textview_1)
@@ -31,6 +32,8 @@ class FirstFragAdapter (val context: Context, val list: ArrayList<ContentListMod
         }
 
         val item = list[position]
+
+        holder.view_image1?.setImageResource(item.image)
         holder.view_text1?.text = item.title
 
         return view

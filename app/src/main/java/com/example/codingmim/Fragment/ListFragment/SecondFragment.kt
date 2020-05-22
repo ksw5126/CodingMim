@@ -1,4 +1,4 @@
-package com.example.codingmim.Fragment
+package com.example.codingmim.Fragment.ListFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
