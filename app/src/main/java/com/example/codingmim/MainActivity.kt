@@ -4,23 +4,36 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
-import com.example.codingmim.Auth.JoinActivity
 import com.example.codingmim.Auth.LoginActivity
 import com.example.codingmim.Auth.MyCominActivity
 import com.example.codingmim.Zzim.ZzimActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.bottom.*
+import pl.pzienowicz.autoscrollviewpager.AutoScrollViewPager
 
 class MainActivity : AppCompatActivity() {
 
-    internal lateinit var viewpager : ViewPager
+    lateinit var viewpager: ViewPager
 
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val images = ArrayList<Int>()
+        images.add(R.drawable.ai)
+        images.add(R.drawable.css)
+        images.add(R.drawable.html)
+
+        viewPager.adapter = ImagesAdapter(this, images)
+        viewPager.setInterval(2000)
+        viewPager.setDirection(AutoScrollViewPager.Direction.RIGHT)
+        viewPager.setCycle(true)
+        viewPager.setBorderAnimation(true)
+        viewPager.setSlideBorderMode(AutoScrollViewPager.SlideBorderMode.TO_PARENT)
+        viewPager.startAutoScroll()
 
         auth = FirebaseAuth.getInstance()
 
@@ -47,14 +60,9 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        viewpager = findViewById(R.id.viewpager) as ViewPager
-
-        val adapter = ViewPagerAdapter(this)
-        viewpager.adapter = adapter
-
         my_page.setOnClickListener {
 
-            if(auth.currentUser == null) {
+            if (auth.currentUser == null) {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             } else {
@@ -74,3 +82,4 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+

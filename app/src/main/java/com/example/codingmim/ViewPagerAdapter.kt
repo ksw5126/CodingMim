@@ -8,23 +8,17 @@ import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 
-class ViewPagerAdapter (private val context: Context ) : PagerAdapter() {
+open class ViewPagerAdapter (private val context: Context, private var images : ArrayList<Int>) : PagerAdapter() {
 
     private var layoutInflater : LayoutInflater? = null
 
-    val Image = arrayOf(
-        R.drawable.ai,
-        R.drawable.css,
-        R.drawable.html
-
-    )
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
         return view === `object`
     }
 
     override fun getCount(): Int {
-        return Image.size
+        return images.size
     }
 
     // 이미지가 생성하는 부분과 없어지는 부분 생성
@@ -34,8 +28,8 @@ class ViewPagerAdapter (private val context: Context ) : PagerAdapter() {
         val v = layoutInflater!!.inflate(R.layout.viewpager_activity, null)
         val image = v.findViewById<View>(R.id.imageview) as ImageView
 
-        image.setImageResource(Image[position])
 
+        image.setImageResource(images[position])
         val vp = container as ViewPager
         vp.addView(v, 0)
 
