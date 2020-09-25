@@ -19,6 +19,7 @@
         <activity android:name=".Auth.JoinActivity" />
         <activity android:name=".Auth.LoginActivity" />
         <activity android:name=".Fragment.MarketInfo.MarketInfoActivity" />
+        <activity android:name=".Fragment.MarketInfo.MarketInfoActivity2" />
         <activity android:name=".LectureActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

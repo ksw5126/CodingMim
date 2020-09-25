@@ -24,7 +24,9 @@ class SecondFragment : Fragment() {
         val list_array = arrayListOf<ContentListModel>(
             ContentListModel(R.drawable.list1, "Lang1", 1, "d"),
             ContentListModel(R.drawable.list2, "Lang2", 1, "d"),
-            ContentListModel(R.drawable.list3, "Lang3", 1, "d")
+            ContentListModel(R.drawable.list3, "Lang3", 1, "d"),
+            ContentListModel(R.drawable.list4, "Lang4", 1, "d")
+
         )
 
         val list_adapter =

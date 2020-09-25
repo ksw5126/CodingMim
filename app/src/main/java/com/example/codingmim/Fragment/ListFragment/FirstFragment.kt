@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.codingmim.Fragment.MarketInfo.MarketInfoActivity
+import com.example.codingmim.Fragment.MarketInfo.MarketInfoActivity2
 import com.example.codingmim.R
 import com.example.codingmim.Utils.FirebaseUtils
 import kotlinx.android.synthetic.main.fragment_first.view.*
@@ -25,7 +26,7 @@ class FirstFragment : Fragment() {
         val view : View = inflater.inflate(R.layout.fragment_first, container, false)
 
         val list_array = arrayListOf<ContentListModel>(
-            ContentListModel(R.drawable.list1, "Lang1", 1, "d"),
+            ContentListModel(R.drawable.list1, "닭요리", 1, "d"),
             ContentListModel(R.drawable.list2, "Lang2", 1, "d"),
             ContentListModel(R.drawable.list3, "Lang3", 1, "d")
 //            ContentListModel(R.drawable.list1, "Lang1", 1, "d"),
@@ -90,9 +91,19 @@ class FirstFragment : Fragment() {
 
         view.listView_first_fragment.setOnItemClickListener { parent, view, position, id ->
 
-            val intent = Intent(requireContext(), MarketInfoActivity::class.java)
-            intent.putExtra("title", list_array.get(position).title)
-            startActivity(intent)
+            if (position == 0) {
+                val intent = Intent(requireContext(), MarketInfoActivity::class.java)
+                intent.putExtra("title", list_array.get(position).title)
+                startActivity(intent)
+            }
+
+            if (position == 1) {
+                val intent = Intent(requireContext(), MarketInfoActivity2::class.java)
+                intent.putExtra("title", list_array.get(position).title)
+                startActivity(intent)
+            }
+
+
 
         }
 

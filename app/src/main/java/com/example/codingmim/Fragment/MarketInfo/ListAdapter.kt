@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.example.codingmim.R
 
-class ListAdapter(val context: Context, val list_price : ArrayList<String>, val list_name: ArrayList<String>) : BaseAdapter() {
+class ListAdapter(val context: Context, val list_price : ArrayList<String>, val list_name: ArrayList<String>)
+    : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
         val view : View = LayoutInflater.from(context).inflate(R.layout.listview_item, null)
