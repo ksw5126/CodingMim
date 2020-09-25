@@ -95,8 +95,8 @@ class MarketInfoActivity : AppCompatActivity() {
 
         figure_2.setOnClickListener {
 
-            figure_1.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25F)
-            figure_2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
+            figure_1.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
+            figure_2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25F)
             figure_3.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
 
             supportFragmentManager.beginTransaction()
@@ -106,9 +106,9 @@ class MarketInfoActivity : AppCompatActivity() {
 
         figure_3.setOnClickListener {
 
-            figure_1.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25F)
+            figure_1.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
             figure_2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
-            figure_3.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15F)
+            figure_3.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 25F)
 
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_area, ReviewFragment())

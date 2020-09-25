@@ -3,9 +3,12 @@ package com.example.codingmim
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import com.example.codingmim.Auth.LoginActivity
 import com.example.codingmim.Auth.MyCominActivity
+import com.example.codingmim.Fragment.ListFragment.FirstFragment
+import com.example.codingmim.Fragment.ListFragment.SecondFragment
 import com.example.codingmim.Zzim.ZzimActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // 메인페이지에서 윗부분 오토스크롤뷰
         val images = ArrayList<Int>()
         images.add(R.drawable.ai)
         images.add(R.drawable.css)
@@ -30,13 +34,15 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = ImagesAdapter(this, images)
         viewPager.setInterval(2000)
         viewPager.setDirection(AutoScrollViewPager.Direction.RIGHT)
-        viewPager.setCycle(true)
+        viewPager.setCycle(false)
         viewPager.setBorderAnimation(true)
         viewPager.setSlideBorderMode(AutoScrollViewPager.SlideBorderMode.TO_PARENT)
         viewPager.startAutoScroll()
 
         auth = FirebaseAuth.getInstance()
 
+
+        // gridview_item.xml 에서 이미지와 텍스트 연결
         val img = arrayOf(
             R.drawable.ai, R.drawable.css, R.drawable.html,
             R.drawable.id, R.drawable.jpg, R.drawable.js,
@@ -58,10 +64,20 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LectureActivity::class.java)
             startActivity(intent)
 
+            Toast.makeText(applicationContext,""+ position, Toast.LENGTH_SHORT).show();
+
+    /*        if (position == 1) {
+
+                supportFragmentManager.beginTransaction().replace(R.id.listView_second_fragment, SecondFragment()).commit()
+            }*/
+
+            when (position) {
+                1 -> SecondFragment()
+            }
         }
 
         my_page.setOnClickListener {
-
+            // 로그인 여부 확인
             if (auth.currentUser == null) {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)

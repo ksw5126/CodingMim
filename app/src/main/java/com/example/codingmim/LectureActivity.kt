@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ScrollView
 import com.example.codingmim.Fragment.ListFragment.FragmentAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_lecture.*
@@ -15,10 +16,7 @@ class LectureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lecture)
 
-        val fragmentAdapter =
-            FragmentAdapter(
-                supportFragmentManager
-            )
+        val fragmentAdapter = FragmentAdapter(supportFragmentManager)
         list_viewpager.adapter = fragmentAdapter
 
         tab_layout.addTab(tab_layout.newTab().setCustomView(createTableView("AI")))
@@ -27,6 +25,8 @@ class LectureActivity : AppCompatActivity() {
         tab_layout.addTab(tab_layout.newTab().setCustomView(createTableView("ID")))
         tab_layout.addTab(tab_layout.newTab().setCustomView(createTableView("JPG")))
         tab_layout.addTab(tab_layout.newTab().setCustomView(createTableView("JS")))
+        tab_layout.addTab(tab_layout.newTab().setCustomView(createTableView("TEST")))
+
 
         list_viewpager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tab_layout))
 
@@ -47,6 +47,8 @@ class LectureActivity : AppCompatActivity() {
 
 
         })
+
+
     }
 
     private fun createTableView(tabName : String) : View {

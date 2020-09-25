@@ -43,7 +43,7 @@ class JoinActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     } else {
-                        Toast.makeText(this, "fail", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "회원가입 실패", Toast.LENGTH_LONG).show()
                     }
                 }
         }

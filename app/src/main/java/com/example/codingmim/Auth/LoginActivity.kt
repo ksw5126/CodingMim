@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
-                        Toast.makeText(this, "fail", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "로그인 실패", Toast.LENGTH_LONG).show()
                     }
                 }
         }

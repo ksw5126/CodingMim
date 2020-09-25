@@ -140,7 +140,6 @@ class MyCominActivity : AppCompatActivity() {
             }.addOnSuccessListener {
                     Toast.makeText(this, "upload성공", Toast.LENGTH_LONG).show()
                 // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
-                // ...
             }
 
 

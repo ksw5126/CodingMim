@@ -1,3 +1,4 @@
+/*
 package com.example.codingmim.Fragment.ListFragment
 
 import android.content.Context
@@ -9,7 +10,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.codingmim.R
 
-class FirstFragAdapter (val context: Context, val list: ArrayList<ContentListModel>) : BaseAdapter() {
+*/
+/**
+ * Created by KSW on 2020-09-25
+ *//*
+
+
+
+class SecondFragAdapter (val context: Context, val list: ArrayList<ContentListModel>) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
         val view : View
@@ -46,7 +54,7 @@ class FirstFragAdapter (val context: Context, val list: ArrayList<ContentListMod
     }
 
     override fun getCount(): Int {
-       return list.size
+        return list.size
     }
 
     private class ViewHolder{
@@ -57,4 +65,4 @@ class FirstFragAdapter (val context: Context, val list: ArrayList<ContentListMod
         var view_text3 : TextView? = null
     }
 
-}
+}*/

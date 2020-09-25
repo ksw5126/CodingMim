@@ -6,9 +6,11 @@
     tools:context=".Fragment.ListFragment.SecondFragment">
 
     <!-- TODO: Update blank com.example.codingmim.fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/listView_second_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="2" />
+        />
+
 
 </FrameLayout>
