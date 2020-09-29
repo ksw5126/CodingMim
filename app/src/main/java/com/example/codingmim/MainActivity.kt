@@ -8,7 +8,9 @@ import androidx.viewpager.widget.ViewPager
 import com.example.codingmim.Auth.LoginActivity
 import com.example.codingmim.Auth.MyCominActivity
 import com.example.codingmim.Fragment.ListFragment.FirstFragment
+import com.example.codingmim.Fragment.ListFragment.SecondFragAdapter
 import com.example.codingmim.Fragment.ListFragment.SecondFragment
+import com.example.codingmim.Fragment.MarketInfo.MarketInfoActivity2
 import com.example.codingmim.Zzim.ZzimActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
@@ -66,14 +68,13 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(applicationContext,""+ position, Toast.LENGTH_SHORT).show();
 
-    /*        if (position == 1) {
+            if (position == 1) {
+                val intent = Intent(this, SecondFragAdapter::class.java)
+                startActivity(intent)
 
-                supportFragmentManager.beginTransaction().replace(R.id.listView_second_fragment, SecondFragment()).commit()
-            }*/
-
-            when (position) {
-                1 -> SecondFragment()
             }
+
+
         }
 
         my_page.setOnClickListener {

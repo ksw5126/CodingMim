@@ -1,4 +1,3 @@
-/*
 package com.example.codingmim.Fragment.ListFragment
 
 import android.content.Context
@@ -10,13 +9,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.codingmim.R
 
-*/
-/**
- * Created by KSW on 2020-09-25
- *//*
-
-
-
 class SecondFragAdapter (val context: Context, val list: ArrayList<ContentListModel>) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
@@ -24,12 +16,12 @@ class SecondFragAdapter (val context: Context, val list: ArrayList<ContentListMo
         val holder : ViewHolder
 
         if(convertView == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.listview_item, null)
+            view = LayoutInflater.from(context).inflate(R.layout.listview_item2, null)
             holder = ViewHolder()
             holder.view_image1 = view.findViewById(R.id.lv_image_area)
-            holder.view_text1 = view.findViewById(R.id.lv_textview_1)
-            holder.view_text2 = view.findViewById(R.id.lv_textview_2)
-            holder.view_text3 = view.findViewById(R.id.lv_textview_3)
+            holder.view_text1 = view.findViewById(R.id.lv_textview_11)
+            holder.view_text2 = view.findViewById(R.id.lv_textview_22)
+            holder.view_text3 = view.findViewById(R.id.lv_textview_33)
 
             view.tag = holder
         } else {
@@ -65,4 +57,4 @@ class SecondFragAdapter (val context: Context, val list: ArrayList<ContentListMo
         var view_text3 : TextView? = null
     }
 
-}*/
+}

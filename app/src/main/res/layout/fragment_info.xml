@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.MarketInfo.InfoFragment">
+    tools:context=".Fragment.MarketInfo.InfoFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -14,12 +15,17 @@
         android:textStyle="bold"
         android:text="강의 소개" />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:paddingBottom="200dp"
+        android:textSize="40sp"
         android:text="~를 아세?: 특이하게 플러리는 종종 '아세요?' 에서 요 를 빼고 쓴다
         . 보통 본인이 어떤 플레이를 한 뒤에 설명과 함께 쓰거나, 본인이 플레이를 잘 했는데
          시청자들이 인정을 안해줄때 '참나.... 님들이 하스스톤(혹은 슈마메)를 알기나 아세?
@@ -28,4 +34,6 @@
          본인은 ~세요 에서 줄인 거만 인정한다고 했으나, 이후 방송에서 본인도 문법에
          맞지 않는 곳에 가끔 ~세를 붙이기도 한다."/>
 
-</FrameLayout>
+    </ScrollView>
+
+</LinearLayout>
